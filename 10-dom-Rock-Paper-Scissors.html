@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="styles/10-dom-Rock-Paper-Scissors.css"> 
+</head>
+
+<body>
+  <p class="js-text"> Rock Paper Scissors</p>
+  <p class="js-playing-buttons">
+    <button title="rock" class="move-button" onclick="
+    playGame('Rock');
+
+  ">
+      <img src="./images/Rock-emoji.png" class="move-icon">
+    </button>
+    <button title="paper" class="move-button" onclick="
+  playGame('Paper');
+  ">
+      <img src="./images/Paper-emoji.png" class="move-icon">
+    </button>
+    <button title="scissors" class="move-button" onclick="
+        playGame('Scissors'); 
+  ">
+      <img src="./images/Scissors-emoji.png"  class="move-icon">
+    </button>
+  </p>
+  <p class="js-current-result result">
+    
+    <!--win, lost, Tie-->
+  </p>
+  <p class="js-discription-current-game">
+    <!--You paper - Scissors Computer-->
+
+  </p>
+  <p class="js-score-report score">
+    <!--win: 0, losses: 0, Ties: 0-->
+  </p>
+
+
+
+  <p class="js-reset-show-button">
+    <button title="resetScore" class="resetButton" onclick="
+    score.Loose=0;
+    score.Tie=0;
+    score.Win=0;
+    showScore();
+/*
+    console.log(score);
+    console.log(`Score Reseted wins: ${score.Win}, Losses: ${score.Loose}, Ties: ${score.Tie} `)
+*/
+    localStorage.removeItem('score');
+  ">
+      Reset Score
+    </button>
+
+  </p>
+  <script src="scripts/10-Rock-Paper-Scissors.js"></script>
+</body>
+
+</html>
